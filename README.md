@@ -26,7 +26,7 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 School Library <a name="about-project"></a>
+# 📖 Ruby Capstone - Catalog of My Things <a name="about-project"></a>
 
 In this project I created a tool to record what books are in a library and who borrows them.
 
