@@ -28,7 +28,7 @@
 
 # 📖 Ruby Capstone - Catalog of My Things <a name="about-project"></a>
 
-In this project I created a tool to record what books are in a library and who borrows them.
+In this project, we created a console app that helps you keep a record of different types of things you own: books, music albums, movies, and games. Everything will be based on the UML class diagram presented. The data will be stored in JSON files but you will also prepare a database with tables structure analogical to your program's class structure.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -43,9 +43,8 @@ In this project I created a tool to record what books are in a library and who b
 
 ### Key Features <a name="key-features"></a>
 
-- **Add new students or teachers**
-- **Add new books**
-- **Save records of who borrowed a given book and when**
+- **Add new books, music albums, movies, and games**
+- **Keep record of items**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -60,9 +59,9 @@ In this project I created a tool to record what books are in a library and who b
 Clone project
 
 ```bash
-git clone https://github.com/paulinagonzalezc/school-library-ruby
+git clone https://github.com/paulinagonzalezc/ruby-capstone-catalog
 
-cd school-library-ruby
+cd ruby-capstone-catalog
 ```
 
 Run the program
@@ -81,11 +80,22 @@ ruby main.rb
 - Twitter: [@paulinagzzc](https://twitter.com/paulinagzzc)
 - LinkedIn: [Paulina Gonzalez Cantu](https://linkedin.com/in/paulina-gonzalez-cantu)
 
+👤 **Zia Bakhteyari**
+
+- GitHub: [@zia123456](https://github.com/Zia123456)
+- Twitter: [@zia_bakhteyari](https://twitter.com/Zia_Bakhteyari)
+- LinkedIn: [Zia bakhteyari](https://www.linkedin.com/in/zia-bakhteyari)
+
+👤 **David Underwood**
+
+- GitHub: [@david63011](https://github.com/david63011)
+- Twitter: [@david630](https://twitter.com/david630)
+- LinkedIn: [David Underwood](https://www.linkedin.com/in/davidunder)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Redesign UI**
 - [ ] **Solve edge cases**
 - [ ] **More methods**
 
@@ -95,7 +105,7 @@ ruby main.rb
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/paulinagonzalezc/school-library-ruby/issues).
+Feel free to check the [issues page](https://github.com/paulinagonzalezc/ruby-capstone-catalog/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
