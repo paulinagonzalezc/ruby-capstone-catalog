@@ -92,6 +92,12 @@ ruby main.rb
 - Twitter: [@david630](https://twitter.com/david630)
 - LinkedIn: [David Underwood](https://www.linkedin.com/in/davidunder)
 
+👤 **Italo Lon Kan**
+
+- GitHub: [@storres20](https://github.com/storres20)
+- Twitter: [@italolonkan](https://twitter.com/italolonkan)
+- LinkedIn: [Italo Lon Kan](https://www.linkedin.com/in/italo-lon-kan/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
