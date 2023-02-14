@@ -1,17 +1,17 @@
-require_relative 'item.rb'
+require_relative 'item'
 
-class Label 
-    attr_accessor :title, :color, :items
+class Label
+  attr_accessor :title, :color, :items
 
-    def initialize(title, color)
-        @id= Random.rand(1..1000)
-        @title = title
-        @color = color
-        @items = []
-    end
+  def initialize(title, color)
+    @id = Random.rand(1..1000)
+    @title = title
+    @color = color
+    @items = []
+  end
 
-    def add_item(item)
-        @items << item
-        item.label = self
-    end
+  def add_item(item)
+    @items << item
+    item.label = self
+  end
 end
