@@ -1,44 +1,19 @@
-require_relative './book'
-module CreateBook
-  def add_book
-    print 'Publisher: '
-    publisher = gets.chomp
-    print 'Cover state: '
-    cover_state = gets.chomp
-    puts 'Choose a genre:'
-    print 'Genre: '
-    genre = gets.chomp
-    case genre
+require_relative 'book'
+class CreateBook
+  def initialize(_books)
+    @books = []
+  end
 
-    when '1'
-      genre = 'Fiction'
-    when '2'
-      genre = 'Non-fiction'
-    when '3'
-      genre = 'Poetry'
-    when '4'
-      genre = 'Drama'
-    when '5'
-      genre = 'Science'
-    when '6'
-      genre = 'History'
-    when '7'
-      genre = 'Biography'
-    when '8'
-      genre = 'Other'
-    else
-      puts 'Invalid option'
-    end
-    print 'Author: '
-    author = gets.chomp
-    print 'Source: '
-    source = gets.chomp
-    print 'Label: '
-    label = gets.chomp
-    print 'Publish date: '
-    date = gets.chomp
-    book = Book.new(publisher, cover_state, genre, author, source, label, date)
+  def create_book
+    puts 'Enter the title of the book'
+    title = gets.chomp
+    puts 'Enter the publisher of the book'
+    publisher = gets.chomp
+    puts 'Enter the publish date of the book'
+    publish_date = gets.chomp
+    puts 'Enter the cover state of the book'
+    cover_state = gets.chomp
+    book = Book.new(title, publisher, publish_date, cover_state)
     @books << book
-    puts 'Book added successfully'
   end
 end
