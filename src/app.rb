@@ -7,8 +7,21 @@ class App
     @option = option
     @albums = []
     @genres = []
+    @books = []
   end
 
+
+   # List all books.
+  def list_books
+    if @books.empty?
+      puts 'Books list is empty'
+    else
+      @books.each do |book|
+        puts "Id: #{book.id}, Title: #{book.title}, Publisher: #{book.publisher}, Publish Date: #{book.publish_date}, Cover State: #{book.cover_state}"
+      end
+    end
+      @option.show_options
+    end
   # List all albums.
   def list_albums
     if @albums.empty?
