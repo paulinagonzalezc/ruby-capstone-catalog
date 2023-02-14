@@ -2,6 +2,7 @@ require 'json'
 require 'fileutils'
 require_relative './music_album'
 require_relative './genre'
+require_relative './book'
 
 def load_data
   puts 'LOADING DATA...'
