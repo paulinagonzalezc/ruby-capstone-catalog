@@ -2,11 +2,13 @@ require 'json'
 require 'fileutils'
 require_relative './music_album'
 require_relative './genre'
+require_relative './book'
 
 def load_data
   puts 'LOADING DATA...'
   load_albums
   load_genres
+  load_books
 end
 
 def load_albums
@@ -24,5 +26,14 @@ def load_genres
   genres_data.each do |genre|
     genre = Genre.new(genre['name'])
     @genres << genre
+  end
+end
+
+def load_books
+  books_data = []
+  books_data = JSON.parse(File.read('./storage/books.json')) if File.exist?('./storage/books.json')
+  books_data.each do |book|
+    book = Book.new(book['title'], book['publisher'], book['publish_date'], book['cover_state'])
+    @books << book
   end
 end
