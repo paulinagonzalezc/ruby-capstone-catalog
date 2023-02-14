@@ -8,6 +8,7 @@ def load_data
   puts 'LOADING DATA...'
   load_albums
   load_genres
+  load_books
 end
 
 def load_albums
