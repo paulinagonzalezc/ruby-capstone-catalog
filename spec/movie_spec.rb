@@ -2,7 +2,7 @@ require_relative '../src/movie'
 
 describe Movie do
   before :each do
-    @movie = Movie.new(true, '30/07/2000')
+    @movie = Movie.new('y', '30/07/2000')
   end
 
   describe '#initialize' do

@@ -14,18 +14,19 @@ class App
     @sources = []
   end
 
-
-   # List all books.
+  # List all books.
   def list_books
     if @books.empty?
       puts 'Books list is empty'
     else
       @books.each do |book|
-        puts "Id: #{book.id}, Title: #{book.title}, Publisher: #{book.publisher}, Publish Date: #{book.publish_date}, Cover State: #{book.cover_state}"
+        puts "Id: #{book.id}, Title: #{book.title}, Publisher: #{book.publisher}"
+        puts "Publish Date: #{book.publish_date}, Cover State: #{book.cover_state}"
       end
     end
-      @option.show_options
-    end
+    @option.show_options
+  end
+
   # List all albums.
   def list_albums
     if @albums.empty?
@@ -37,7 +38,7 @@ class App
     end
     @option.show_options
   end
-  
+
   # List all movies - 3
   def list_movies
     if @movies.empty?
@@ -61,7 +62,7 @@ class App
     end
     @option.show_options
   end
-  
+
   # List all sources - 8
   def list_sources
     if @sources.empty?
@@ -87,7 +88,7 @@ class App
     puts 'Music Album Added Succesfully'
     @option.show_options
   end
-  
+
   # Add movie - 11
   def add_movie
     puts 'Is the movie on silet? [y/n]: '
