@@ -1,6 +1,6 @@
-require_relative './book.rb'
+require_relative './book'
 module CreateBook
-def add_book
+  def add_book
     print 'Publisher: '
     publisher = gets.chomp
     print 'Cover state: '
@@ -18,25 +18,25 @@ def add_book
     genre = gets.chomp
     case genre
 
-when '1'
-    genre = 'Fiction'
-when '2'
-    genre = 'Non-fiction'
-when '3'
-    genre = 'Poetry'
-when '4'
-    genre = 'Drama'
-when '5'
-    genre = 'Science'
-when '6'
-    genre = 'History'
-when '7'
-    genre = 'Biography'
-when '8'
-    genre = 'Other'
-else
-    puts 'Invalid option'
-end
+    when '1'
+      genre = 'Fiction'
+    when '2'
+      genre = 'Non-fiction'
+    when '3'
+      genre = 'Poetry'
+    when '4'
+      genre = 'Drama'
+    when '5'
+      genre = 'Science'
+    when '6'
+      genre = 'History'
+    when '7'
+      genre = 'Biography'
+    when '8'
+      genre = 'Other'
+    else
+      puts 'Invalid option'
+    end
     print 'Author: '
     author = gets.chomp
     print 'Source: '
@@ -48,4 +48,5 @@ end
     book = Book.new(publisher, cover_state, genre, author, source, label, date)
     @books << book
     puts 'Book added successfully'
-   end
+  end
+end
