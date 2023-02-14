@@ -25,4 +25,13 @@ def load_genres
     genre = Genre.new(genre['name'])
     @genres << genre
   end
+
+  def load_books 
+    books_data = []
+    books_data = JSON.parse(File.read('./storage/books.json')) if File.exist?('./storage/books.json')
+    books_data.each do |book|
+      book = Book.new(book['title'], book['publisher'], book['publish_date'], book['cover_state'])
+      @books << book
+    end
+  end
 end
