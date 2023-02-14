@@ -6,7 +6,7 @@ class Options
 
   def initialize
     @app = App.new(self)
-    # @app.load
+    @app.load
     puts 'Welcome to a Catalog of your things!'
     show_options
   end
