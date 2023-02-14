@@ -6,15 +6,7 @@ module CreateBook
     print 'Cover state: '
     cover_state = gets.chomp
     puts 'Choose a genre:'
-    puts '1. Fiction'
-    puts '2. Non-fiction'
-    puts '3. Poetry'
-    puts '4. Drama'
-    puts '5. Science'
-    puts '6. History'
-    puts '7. Biography'
-    puts '8. Other'
-    print 'Genre: '
+     print 'Genre: '
     genre = gets.chomp
     case genre
 
