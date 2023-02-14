@@ -11,7 +11,7 @@ describe Book do
     end
   end
 
- describe '#publish_date' do
+  describe '#publish_date' do
     it 'should return the publish date of the album' do
       expect(@book.publish_date).to eq '02/02/12'
     end

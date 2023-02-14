@@ -28,20 +28,4 @@ def save_genre
   FileUtils.mkdir_p('storage')
   File.write('./storage/genres.json', JSON.generate(arr))
   puts 'Genre saved successfully'
-
-def save_book
-  arr = []
-  @books.each do |book|
-    obj = {
-      'id' => book.id,
-      'title' => book.title,
-      'publisher' => book.publisher,
-      'publish_date' => book.publish_date,
-      'cover_state' => book.cover_state
-    }
-    arr.push(obj)
-  end
-  FileUtils.mkdir_p('storage')
-  File.write('./storage/books.json', JSON.generate(arr))
-  puts 'Book saved successfully'
 end
