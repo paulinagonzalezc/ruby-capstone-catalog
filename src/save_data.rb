@@ -1,6 +1,23 @@
 require 'json'
 require 'fileutils'
 
+def save_book
+  arr = []
+  @books.each do |book|
+    obj = {
+      'id' => book.id,
+      'title' => book.title,
+      'publisher' => book.publisher,
+      'publish_date' => book.publish_date,
+      'cover_state' => book.cover_state
+    }
+    arr.push(obj)
+  end
+  FileUtils.mkdir_p('storage')
+  File.write('./storage/books.json', JSON.generate(arr))
+  puts 'Books saved successfully'
+end
+
 def save_album
   arr = []
   @albums.each do |album|
@@ -30,6 +47,7 @@ def save_genre
   puts 'Genre saved successfully'
 end
 
+<<<<<<< HEAD
 def save_game
   arr = []
   @games.each do |game|
@@ -37,10 +55,20 @@ def save_game
       'id' => game.id,
       'multiplayer' => game.multiplayer,
       'publish_date' => game.publish_date
+=======
+def save_movie
+  arr = []
+  @movies.each do |movie|
+    obj = {
+      'id' => movie.id,
+      'silet' => movie.silet,
+      'publish_date' => movie.publish_date
+>>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd
     }
     arr.push(obj)
   end
   FileUtils.mkdir_p('storage')
+<<<<<<< HEAD
   File.write('./storage/games.json', JSON.generate(arr))
   puts 'Game saved successfully'
 end
@@ -52,10 +80,28 @@ def save_author
       'id' => author.id,
       'first_name' => author.first_name,
       'last_name' => author.last_name
+=======
+  File.write('./storage/movies.json', JSON.generate(arr))
+  puts 'Movie saved successfully'
+end
+
+def save_source
+  arr = []
+  @sources.each do |sour|
+    obj = {
+      'id' => sour.id,
+      'name' => sour.name
+>>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd
     }
     arr.push(obj)
   end
   FileUtils.mkdir_p('storage')
+<<<<<<< HEAD
   File.write('./storage/authors.json', JSON.generate(arr))
   puts 'Author saved successfully'
 end
+=======
+  File.write('./storage/sources.json', JSON.generate(arr))
+  puts 'Source saved successfully'
+end
+>>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd

@@ -2,7 +2,7 @@ require_relative '../src/music_album'
 
 describe MusicAlbum do
   before :each do
-    @album = MusicAlbum.new(true, '02/02/12')
+    @album = MusicAlbum.new('y', '02/02/12')
   end
 
   describe '#initialize' do
