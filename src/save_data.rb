@@ -1,7 +1,7 @@
 require 'json'
 require 'fileutils'
 
-def save_books
+def save_book
   arr = []
   @books.each do |book|
     obj = {
