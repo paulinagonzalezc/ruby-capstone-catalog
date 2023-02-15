@@ -14,6 +14,23 @@ CREATE TABLE genre (
   name VARCHAR(100)
 );
 
+-- Game class table
+CREATE TABLE games (
+  id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY,
+  multiplayer TEXT NOT NULL,
+  last_played_at DATE NOT NULL,
+  PRIMARY KEY(id)
+);
+
+-- Author class table
+CREATE TABLE author (
+  id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY,
+  first_name TEXT NOT NULL,
+  last_name TEXT NOT NULL,
+  items INTEGER NOT NULL,
+  PRIMARY KEY (id)
+);
+
 -- CREATE TABLE books
 CREATE TABLE books (
   id SERIAL PRIMARY KEY,
