@@ -32,4 +32,19 @@ CREATE TABLE labels (
   color VARCHAR (100) NOT NULL,
   PRIMARY KEY (id)
   ITEMS_ID INT FOREIGN KEY REFERENCES item(id),
+  
+-- Movie class table
+CREATE TABLE movie (
+  id SERIAL PRIMARY KEY,
+  item_id int FOREIGN KEY REFERENCES item(id),
+  silet BOOLEAN,
+  publish_date DATE,
+  archived BOOLEAN,
+);
+
+-- Source class table
+CREATE TABLE source (
+  id SERIAL PRIMARY KEY,
+  item_id int FOREIGN KEY REFERENCES item(id),
+  name VARCHAR(100)
 );
