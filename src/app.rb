@@ -77,7 +77,8 @@ class App
       puts 'Game list is empty'
     else
       @games.each do |game|
-        puts "Id: #{game.id}, Multiplayer: #{game.multiplayer} Published: #{game.publish_date} Last_played_at: #{game.last_played_at}"
+        puts "Id: #{game.id}, Multiplayer: #{game.multiplayer}"
+        puts "Published: #{game.publish_date} Last_played_at: #{game.last_played_at}"
       end
     end
   end
@@ -160,7 +161,8 @@ class App
     publish_date = gets.chomp.to_s
     puts 'Last played date  [dd/mm/yyyy]?:'
     last_played_at = gets.chomp.to_s
-    @games.push(Game.new(multiplayer, last_played_at, publish_date))
+    @games.push(Game.new(multiplayer,
+                         last_played_at, publish_date))
     puts 'Add author fullname'
     fullname = gets.chomp
     arr = fullname.split

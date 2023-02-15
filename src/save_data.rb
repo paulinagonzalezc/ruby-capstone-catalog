@@ -47,15 +47,6 @@ def save_genre
   puts 'Genre saved successfully'
 end
 
-<<<<<<< HEAD
-def save_game
-  arr = []
-  @games.each do |game|
-    obj = {
-      'id' => game.id,
-      'multiplayer' => game.multiplayer,
-      'publish_date' => game.publish_date
-=======
 def save_movie
   arr = []
   @movies.each do |movie|
@@ -63,12 +54,39 @@ def save_movie
       'id' => movie.id,
       'silet' => movie.silet,
       'publish_date' => movie.publish_date
->>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd
     }
     arr.push(obj)
   end
   FileUtils.mkdir_p('storage')
-<<<<<<< HEAD
+  File.write('./storage/movies.json', JSON.generate(arr))
+  puts 'Movie saved successfully'
+end
+
+def save_source
+  arr = []
+  @sources.each do |sour|
+    obj = {
+      'id' => sour.id,
+      'name' => sour.name
+    }
+    arr.push(obj)
+  end
+  FileUtils.mkdir_p('storage')
+  File.write('./storage/sources.json', JSON.generate(arr))
+  puts 'Source saved successfully'
+end
+
+def save_game
+  arr = []
+  @games.each do |game|
+    obj = {
+      'id' => game.id,
+      'multiplayer' => game.multiplayer,
+      'publish_date' => game.publish_date
+    }
+    arr.push(obj)
+  end
+  FileUtils.mkdir_p('storage')
   File.write('./storage/games.json', JSON.generate(arr))
   puts 'Game saved successfully'
 end
@@ -80,28 +98,10 @@ def save_author
       'id' => author.id,
       'first_name' => author.first_name,
       'last_name' => author.last_name
-=======
-  File.write('./storage/movies.json', JSON.generate(arr))
-  puts 'Movie saved successfully'
-end
-
-def save_source
-  arr = []
-  @sources.each do |sour|
-    obj = {
-      'id' => sour.id,
-      'name' => sour.name
->>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd
     }
     arr.push(obj)
   end
   FileUtils.mkdir_p('storage')
-<<<<<<< HEAD
   File.write('./storage/authors.json', JSON.generate(arr))
   puts 'Author saved successfully'
 end
-=======
-  File.write('./storage/sources.json', JSON.generate(arr))
-  puts 'Source saved successfully'
-end
->>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd
