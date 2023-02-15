@@ -1,5 +1,6 @@
-<<<<<<< HEAD
-[{"id":249,"name":"Rock"},{"id":672,"name":"Pop"},{"id":151,"name":"Pop alt"},{"id":880,"name":"love"}]
-=======
-[{"id":4,"name":"Rock"},{"id":856,"name":"Pop"},{"id":777,"name":"Pop alt"},{"id":721,"name":"Pop"}]
->>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd
+[
+  {"id": 249, "name": "Rock"},
+  {"id": 672, "name": "Pop"},
+  {"id": 151, "name": "Pop alt"},
+  {"id": 880, "name": "love"}
+]

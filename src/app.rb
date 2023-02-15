@@ -8,20 +8,7 @@ require_relative './load_data'
 require_relative './genre'
 require_relative './label'
 
-class App
-  def initialize(option)
-    @option = option
-    @albums = []
-    @genres = []
-    @games = []
-    @authors = []
-    @books = []
-    @movies = []
-    @sources = []
-    @labels = []
-  end
-
-  # List all books.
+module ListMethods
   def list_books
     if @books.empty?
       puts 'Books list is empty'
@@ -34,7 +21,6 @@ class App
     @option.show_options
   end
 
-  # List all albums.
   def list_albums
     if @albums.empty?
       puts 'Albums list is empty'
@@ -46,7 +32,6 @@ class App
     @option.show_options
   end
 
-  # List all movies - 3
   def list_movies
     if @movies.empty?
       puts 'Movies list is empty'
@@ -58,7 +43,6 @@ class App
     @option.show_options
   end
 
-  # List all genres.
   def list_genres
     if @genres.empty?
       puts 'Genre list is empty'
@@ -70,8 +54,6 @@ class App
     @option.show_options
   end
 
-  # List_games
-
   def list_games
     if @games.empty?
       puts 'Game list is empty'
@@ -81,12 +63,12 @@ class App
         puts "Published: #{game.publish_date} Last_played_at: #{game.last_played_at}"
       end
     end
+    @option.show_options
   end
 
-  # List lables
-  def list_lables
-    if @lables.empty?
-      puts 'Lables list is empty'
+  def list_labels
+    if @labels.empty?
+      puts 'Labels list is empty'
     else
       @lables.each do |lable|
         puts "Id: #{lable.id}, Name: #{lable.name} Color: #{lable.color}"
@@ -95,7 +77,6 @@ class App
     @option.show_options
   end
 
-  # List authors
   def list_authors
     if @authors.empty?
       puts 'Authors list is empty'
@@ -104,9 +85,9 @@ class App
         puts "Id: #{author.id} First Name: #{author.first_name} Last Name: #{author.last_name}"
       end
     end
+    @option.show_options
   end
 
-  # List all sources - 8
   def list_sources
     if @sources.empty?
       puts 'Source list is empty'
@@ -116,6 +97,22 @@ class App
       end
     end
     @option.show_options
+  end
+end
+
+class App
+  include ListMethods
+
+  def initialize(option)
+    @option = option
+    @albums = []
+    @genres = []
+    @games = []
+    @authors = []
+    @books = []
+    @movies = []
+    @sources = []
+    @labels = []
   end
 
   # Add book and lable
