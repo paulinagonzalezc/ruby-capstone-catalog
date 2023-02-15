@@ -60,7 +60,6 @@ class App
       color = gets.chomp
       lable = Lable.new(name, color)
       @lables << lable
-      @option.show_options
     end
 
     # List all albums.
