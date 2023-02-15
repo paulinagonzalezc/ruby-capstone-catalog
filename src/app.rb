@@ -28,6 +28,7 @@ class App
     @option.show_options
   end
 
+  # Add a book.
   def add_book
     def create_book
       puts 'Enter the title of the book'
@@ -42,6 +43,7 @@ class App
       @books << book
     end
 
+    # List lables
     def list_lables
       if @lables.empty?
         puts 'Lables list is empty'
@@ -53,6 +55,7 @@ class App
       @option.show_options
     end
 
+    # Add lable
     def add_lable
       puts 'Enter the name of the lable'
       name = gets.chomp
