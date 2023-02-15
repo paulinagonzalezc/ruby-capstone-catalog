@@ -14,6 +14,25 @@ CREATE TABLE genre (
   name VARCHAR(100)
 );
 
+-- CREATE TABLE books
+CREATE TABLE books (
+  id SERIAL PRIMARY KEY,
+  item_id int FOREIGN KEY REFERENCES item(id),
+  author VARCHAR(100),
+  genre VARCHAR(100),
+  publish_date DATE,
+  archived BOOLEAN,
+  cover_state VARCHAR(100),
+);
+
+-- CREATE TABLE lables
+CREATE TABLE labels (
+  id INTERGER NOT NULL,
+  title VARCHAR(100) NOT NULL,
+  color VARCHAR (100) NOT NULL,
+  PRIMARY KEY (id)
+  ITEMS_ID INT FOREIGN KEY REFERENCES item(id),
+  
 -- Movie class table
 CREATE TABLE movie (
   id SERIAL PRIMARY KEY,
@@ -24,7 +43,7 @@ CREATE TABLE movie (
 );
 
 -- Source class table
-CREATE TABLE genre (
+CREATE TABLE source (
   id SERIAL PRIMARY KEY,
   item_id int FOREIGN KEY REFERENCES item(id),
   name VARCHAR(100)
