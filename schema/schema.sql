@@ -29,6 +29,8 @@ CREATE TABLE author (
   last_name TEXT NOT NULL,
   items INTEGER NOT NULL,
   PRIMARY KEY (id)
+);
+
 -- Movie class table
 CREATE TABLE movie (
   id SERIAL PRIMARY KEY,
