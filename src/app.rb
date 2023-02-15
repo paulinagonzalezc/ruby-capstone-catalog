@@ -53,6 +53,16 @@ class App
       @option.show_options
     end
 
+    def add_lable
+      puts 'Enter the name of the lable'
+      name = gets.chomp
+      puts 'Enter the color of the lable'
+      color = gets.chomp
+      lable = Lable.new(name, color)
+      @lables << lable
+      @option.show_options
+    end
+
     # List all albums.
     def list_albums
       if @albums.empty?
