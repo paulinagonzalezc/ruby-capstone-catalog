@@ -2,27 +2,21 @@ require 'json'
 require 'fileutils'
 require_relative './music_album'
 require_relative './genre'
-<<<<<<< HEAD
 require_relative './game'
 require_relative './author'
-=======
 require_relative './book'
 require_relative './movie'
 require_relative './source'
->>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd
 
 def load_data
   puts 'LOADING DATA...'
   load_albums
   load_genres
-<<<<<<< HEAD
   load_games
   load_authors
-=======
   load_books
   load_movies
   load_sources
->>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd
 end
 
 def load_albums
@@ -43,12 +37,11 @@ def load_genres
   end
 end
 
-<<<<<<< HEAD
 def load_games
   games_data = []
   games_data = JSON.parse(File.read('./storage/games.json')) if File.exist?('./storage/games.json')
   games_data.each do |game|
-    game = Game.new(game['id'], game['multiplayer'], game['publish_date'] )
+    game = Game.new(game['id'], game['multiplayer'], game['publish_date'])
     @games << game
   end
 end
@@ -61,7 +54,7 @@ def load_authors
     @authors << author
   end
 end
-=======
+
 def load_books
   books_data = []
   books_data = JSON.parse(File.read('./storage/books.json')) if File.exist?('./storage/books.json')
@@ -88,4 +81,3 @@ def load_sources
     @sources << sour
   end
 end
->>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd

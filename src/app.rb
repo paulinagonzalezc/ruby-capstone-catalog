@@ -1,11 +1,8 @@
 require_relative './music_album'
-<<<<<<< HEAD
-require_relative './game.rb'
-require_relative './author.rb'
-=======
+require_relative './game'
+require_relative './author'
 require_relative './movie'
 require_relative './source'
->>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd
 require_relative './save_data'
 require_relative './load_data'
 require_relative './genre'
@@ -16,10 +13,8 @@ class App
     @option = option
     @albums = []
     @genres = []
-<<<<<<< HEAD
     @games = []
     @authors = []
-=======
     @books = []
     @movies = []
     @sources = []
@@ -37,7 +32,6 @@ class App
       end
     end
     @option.show_options
->>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd
   end
 
   # List all albums.
@@ -64,8 +58,6 @@ class App
     @option.show_options
   end
 
-  # List_games
-
   # List all genres.
   def list_genres
     if @genres.empty?
@@ -78,14 +70,18 @@ class App
     @option.show_options
   end
 
-<<<<<<< HEAD
+  # List_games
+
   def list_games
     if @games.empty?
       puts 'Game list is empty'
     else
       @games.each do |game|
         puts "Id: #{game.id}, Multiplayer: #{game.multiplayer} Published: #{game.publish_date} Last_played_at: #{game.last_played_at}"
-=======
+      end
+    end
+  end
+
   # List lables
   def list_lables
     if @lables.empty?
@@ -93,21 +89,21 @@ class App
     else
       @lables.each do |lable|
         puts "Id: #{lable.id}, Name: #{lable.name} Color: #{lable.color}"
->>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd
       end
     end
     @option.show_options
   end
 
-<<<<<<< HEAD
+  # List authors
   def list_authors
     if @authors.empty?
       puts 'Authors list is empty'
     else
       @authors.each do |author|
         puts "Id: #{author.id} First Name: #{author.first_name} Last Name: #{author.last_name}"
-=======
-  # List authors
+      end
+    end
+  end
 
   # List all sources - 8
   def list_sources
@@ -116,14 +112,11 @@ class App
     else
       @sources.each do |sour|
         puts "Id: #{sour.id} Name: #{sour.name}"
->>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd
       end
     end
     @option.show_options
   end
 
-<<<<<<< HEAD
-=======
   # Add book and lable
   def add_book
     puts 'Enter the title of the book'
@@ -146,8 +139,6 @@ class App
     @option.show_options
   end
 
-  # Add album
->>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd
   def add_album
     puts 'Is the album on spotify? [y/n]: '
     on_spotify = gets.chomp
@@ -161,7 +152,6 @@ class App
     @option.show_options
   end
 
-<<<<<<< HEAD
   def add_game
     puts 'Is the game multiplayer? [true/false]: '
     # YN?
@@ -174,12 +164,11 @@ class App
     puts 'Add author fullname'
     fullname = gets.chomp
     arr = fullname.split
-    @authors.push(Author.new(arr[0], arr[1])) 
+    @authors.push(Author.new(arr[0], arr[1]))
     puts 'Game Added Succesfully'
     @option.show_options
   end
 
-=======
   # Add movie - 11
   def add_movie
     puts 'Is the movie on silet? [y/n]: '
@@ -194,32 +183,14 @@ class App
     @option.show_options
   end
 
-  # Add game
-
-  # def add_lable
-  #   puts 'Enter the name of the lable'
-  #   name = gets.chomp
-  #   puts 'Enter the color of the lable'
-  #   color = gets.chomp
-  #   lable = Lable.new(name, color)
-  #   @lables << lable
-  # end
-
->>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd
   def save_data
     save_book
     save_genre
     save_album
-<<<<<<< HEAD
-    # save_movie
     save_game
     save_author
-=======
     save_movie
     save_source
-    # save_game
-    # save_authors
->>>>>>> 9afecc369eb46eea10a2dc8a987f15fbbc9389bd
   end
 
   def load
