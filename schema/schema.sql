@@ -14,7 +14,7 @@ CREATE TABLE genre (
   name VARCHAR(100)
 );
 
--- CREATE TABLE book
+-- CREATE TABLE books
 CREATE TABLE books (
   id SERIAL PRIMARY KEY,
   item_id int FOREIGN KEY REFERENCES item(id),
