@@ -15,7 +15,6 @@ def save_book
   end
   FileUtils.mkdir_p('storage')
   File.write('./storage/books.json', JSON.generate(arr))
-  puts 'Books saved successfully'
 end
 
 def save_album
@@ -30,7 +29,6 @@ def save_album
   end
   FileUtils.mkdir_p('storage')
   File.write('./storage/albums.json', JSON.generate(arr))
-  puts 'Album saved successfully'
 end
 
 def save_genre
@@ -44,7 +42,6 @@ def save_genre
   end
   FileUtils.mkdir_p('storage')
   File.write('./storage/genres.json', JSON.generate(arr))
-  puts 'Genre saved successfully'
 end
 
 def save_movie
@@ -59,7 +56,6 @@ def save_movie
   end
   FileUtils.mkdir_p('storage')
   File.write('./storage/movies.json', JSON.generate(arr))
-  puts 'Movie saved successfully'
 end
 
 def save_source
@@ -73,7 +69,6 @@ def save_source
   end
   FileUtils.mkdir_p('storage')
   File.write('./storage/sources.json', JSON.generate(arr))
-  puts 'Source saved successfully'
 end
 
 def save_game
@@ -88,7 +83,6 @@ def save_game
   end
   FileUtils.mkdir_p('storage')
   File.write('./storage/games.json', JSON.generate(arr))
-  puts 'Game saved successfully'
 end
 
 def save_author
@@ -103,5 +97,4 @@ def save_author
   end
   FileUtils.mkdir_p('storage')
   File.write('./storage/authors.json', JSON.generate(arr))
-  puts 'Author saved successfully'
 end
