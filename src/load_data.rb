@@ -41,7 +41,7 @@ def load_games
   games_data = []
   games_data = JSON.parse(File.read('./storage/games.json')) if File.exist?('./storage/games.json')
   games_data.each do |game|
-    game = Game.new(game['id'], game['multiplayer'], game['publish_date'])
+    game = Game.new(game['id'], game['multiplayer'], game['publish_date'], game['last_played_at'])
     @games << game
   end
 end
