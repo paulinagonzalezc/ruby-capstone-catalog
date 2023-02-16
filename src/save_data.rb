@@ -22,7 +22,7 @@ def save_labels
   @labels.each do |label|
     obj = {
       'title' => label.title,
-      'color' => label.color,
+      'color' => label.color
     }
     arr.push(obj)
   end

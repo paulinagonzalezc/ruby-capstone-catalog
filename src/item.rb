@@ -17,7 +17,7 @@ class Item
     @archived = true if can_be_archived?
   end
 
-   def genre=(genre)
+  def genre=(genre)
     @genre = genre
     genre.add_item(self)
   end
@@ -41,5 +41,7 @@ class Item
 
   def can_be_archived?
     (Date.today.year - Date.parse(@publish_date).year) > 10
+  rescue ArgumentError
+    false
   end
 end
