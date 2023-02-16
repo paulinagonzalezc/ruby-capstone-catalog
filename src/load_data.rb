@@ -7,6 +7,7 @@ require_relative './author'
 require_relative './book'
 require_relative './movie'
 require_relative './source'
+require_relative './label'
 
 def load_data
   puts 'Data loaded...'
@@ -15,6 +16,7 @@ def load_data
   load_games
   load_authors
   load_books
+  load_labels
   load_movies
   load_sources
 end
@@ -61,6 +63,15 @@ def load_books
   books_data.each do |book|
     book = Book.new(book['title'], book['publisher'], book['publish_date'], book['cover_state'])
     @books << book
+  end
+end
+
+def load_labels
+  labels_data = []
+  labels_data = JSON.parse(File.read('./storage/labels.json')) if File.exist?('./storage/labels.json')
+  labels_data.each do |label|
+    label = Label.new(label['title'], label['color'])
+    @labels << label
   end
 end
 

@@ -60,8 +60,8 @@ module ListMethods
     if @labels.empty?
       puts 'Labels list is empty'
     else
-      @lables.each do |lable|
-        puts "Id: #{lable.id}, Name: #{lable.name} Color: #{lable.color}"
+      @labels.each do |label|
+        puts "Name: #{label.title} Color: #{label.color}"
       end
     end
     @option.show_options
