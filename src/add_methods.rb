@@ -37,7 +37,7 @@ module AddMethods
   def add_game
     puts 'Is the game multiplayer? [true/false]: '
     # YN?
-    multiplayer = gets.chomp.downcase == "true"
+    multiplayer = gets.chomp.downcase == 'true'
     puts 'When was the game published [dd/mm/yyyy]?:'
     publish_date = gets.chomp.to_s
     publish_date = Date.parse(publish_date)
