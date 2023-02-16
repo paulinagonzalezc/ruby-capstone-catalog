@@ -77,12 +77,13 @@ def save_game
     obj = {
       'id' => game.id,
       'multiplayer' => game.multiplayer,
-      'publish_date' => game.publish_date
+      'publish_date' => game.publish_date,
+      'last_played_at' => game.last_played_at
     }
     arr.push(obj)
   end
   FileUtils.mkdir_p('storage')
-  File.write('./storage/games.json', JSON.generate(arr))
+  File.write('./storage/games.json', JSON.pretty_generate(arr))
 end
 
 def save_author

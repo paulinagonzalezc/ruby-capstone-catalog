@@ -50,7 +50,7 @@ module ListMethods
     else
       @games.each do |game|
         puts "Id: #{game.id}, Multiplayer: #{game.multiplayer}"
-        puts "Published: #{game.publish_date} Last_played_at: #{game.last_played_at}"
+        puts "Published: #{game.publish_date}, Last_played_at: #{game.last_played_at}"
       end
     end
     @option.show_options

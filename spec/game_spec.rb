@@ -2,7 +2,7 @@ require_relative '../src/game'
 
 describe Game do
   before :each do
-    @game = Game.new(true, '02/03/12', '02/02/12')
+    @game = Game.new(nil, true, '02/02/12', '02/03/12')
   end
 
   describe '#initialize' do

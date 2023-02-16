@@ -37,13 +37,14 @@ module AddMethods
   def add_game
     puts 'Is the game multiplayer? [true/false]: '
     # YN?
-    multiplayer = gets.chomp
+    multiplayer = gets.chomp.downcase == 'true'
     puts 'When was the game published [dd/mm/yyyy]?:'
     publish_date = gets.chomp.to_s
+    publish_date = Date.parse(publish_date)
     puts 'Last played date  [dd/mm/yyyy]?:'
-    last_played_at = gets.chomp.to_s
-    @games.push(Game.new(multiplayer,
-                         last_played_at, publish_date))
+    last_played_at = gets.chomp
+    last_played_at = Date.parse(last_played_at)
+    @games.push(Game.new(nil, multiplayer, publish_date, last_played_at))
     puts 'Add author fullname'
     fullname = gets.chomp
     arr = fullname.split
