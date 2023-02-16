@@ -41,10 +41,23 @@ In this project, we created a console app that helps you keep a record of differ
   </ul>
 </details>
 
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+
 ### Key Features <a name="key-features"></a>
 
 - **Add new books, music albums, movies, and games**
 - **Keep record of items**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Video Demo <a name="live-demo"></a>
+
+- [Video](https://drive.google.com/file/d/1jNL_GjsatwvpB8fZzPp1ia47tyFyWzo1/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
