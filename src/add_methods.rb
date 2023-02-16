@@ -42,8 +42,7 @@ module AddMethods
     publish_date = gets.chomp.to_s
     puts 'Last played date  [dd/mm/yyyy]?:'
     last_played_at = gets.chomp.to_s
-    @games.push(Game.new(multiplayer,
-                         last_played_at, publish_date))
+    @games.push(Game.new(multiplayer, publish_date, last_played_at,))
     puts 'Add author fullname'
     fullname = gets.chomp
     arr = fullname.split
