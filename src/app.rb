@@ -34,6 +34,7 @@ class App
     save_author
     save_movie
     save_source
+    save_labels
   end
 
   def load

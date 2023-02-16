@@ -17,6 +17,19 @@ def save_book
   File.write('./storage/books.json', JSON.generate(arr))
 end
 
+def save_labels
+  arr = []
+  @labels.each do |label|
+    obj = {
+      'title' => label.title,
+      'color' => label.color
+    }
+    arr.push(obj)
+  end
+  FileUtils.mkdir_p('storage')
+  File.write('./storage/labels.json', JSON.generate(arr))
+end
+
 def save_album
   arr = []
   @albums.each do |album|

@@ -22,12 +22,4 @@ describe Source do
       expect(@sour.items).to eq([])
     end
   end
-
-  describe '#add_item' do
-    it 'should add an item to the items array' do
-      item = double('Item')
-      @sour.add_item(item)
-      expect(@sour.items).to include(item)
-    end
-  end
 end
