@@ -102,7 +102,6 @@ ruby main.rb
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Solve edge cases**
 - [ ] **More methods**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

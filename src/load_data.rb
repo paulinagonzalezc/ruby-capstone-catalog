@@ -9,7 +9,7 @@ require_relative './movie'
 require_relative './source'
 
 def load_data
-  puts 'LOADING DATA...'
+  puts 'Data loaded...'
   load_albums
   load_genres
   load_games
